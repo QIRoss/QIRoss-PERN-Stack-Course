@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 
+
 const InputTodo = () => {
 
     const [description, setDescription] = useState("");
@@ -12,9 +13,10 @@ const InputTodo = () => {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
-            });
 
-            console.log(response);
+
+            });
+            window.location = "/";
         } catch (err) {
             console.error(err.message);
         }
